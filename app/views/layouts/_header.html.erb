@@ -18,6 +18,9 @@
         <li class="nav-item">
           <%= link_to "お気に入り（仮）", movies_path %>
         </li>
+        <li class="nav-item">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
       </ul>
     </div>
   </nav>
