@@ -17,3 +17,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+document.getElementById('target').addEventListener('click', () => {
+  document.getElementById('target').classList.add('circle');
+});
