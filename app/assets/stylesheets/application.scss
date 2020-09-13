@@ -54,7 +54,16 @@ img {
   height: auto;
   border: none;
 }
-
+.section-title {
+  text-align: center;
+  font-size: 30px;
+}
+.green {
+  color: $site-color;
+}
+.parple {
+  color: $point-color;
+}
 //header
 header {
   height: 60px;

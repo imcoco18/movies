@@ -50,6 +50,19 @@ img {
   border: none;
 }
 
+.section-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.green {
+  color: #5BE7C4;
+}
+
+.parple {
+  color: #7A57D1;
+}
+
 header {
   height: 60px;
   border-bottom: 1px solid #7A57D1;

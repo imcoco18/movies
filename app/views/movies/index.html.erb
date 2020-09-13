@@ -1,8 +1,26 @@
-<h1>Movieeeees</h1>
+<section class="movie-index">
+  <h1 class="section-title">
+    Moviee<span class="green">e</span><span class="parple">e</span>s
+  </h1>
 
-<% @movies.each do |movie| %>
-<p>タイトル</p>
-<%= movie.title %>
-<p>感想</p>
-<%= movie.body %>
-<% end %>
+  <table>
+    <thead>
+      <tr>
+        <th>映画タイトル</th>
+        <th>感想</th>
+        <th>投稿者</th>
+        <th>投稿日時</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.title %></td>
+          <td><%= movie.body %></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

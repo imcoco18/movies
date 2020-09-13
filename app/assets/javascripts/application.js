@@ -18,6 +18,6 @@
 //= require popper
 //= require bootstrap-sprockets
 
-document.getElementById('target').addEventListener('click', () => {
-  document.getElementById('target').classList.add('circle');
-});
+// document.getElementById('target').addEventListener('click', () => {
+//   document.getElementById('target').classList.add('circle');
+// });
