@@ -1,2 +1,8 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>Movieeeees</h1>
+
+<% @movies.each do |movie| %>
+<p>タイトル</p>
+<%= movie.title %>
+<p>感想</p>
+<%= movie.body %>
+<% end %>

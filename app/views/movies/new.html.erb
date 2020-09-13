@@ -1,2 +1,9 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<h1>Post Movie</h1>
+
+<%= form_for(@movie, url: '/movies') do |f| %>
+  <h4>映画タイトル </h4>
+  <%= f.text_field :title %>
+  <h4>感想</h4>
+  <%= f.text_area :body %>
+  <%= f.submit "Post" %>
+  <% end %>
