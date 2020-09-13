@@ -21,7 +21,11 @@ $point-color: #7A57D1;
 $font-color: #200A3E;
 
 //all
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: $background-color;
   color: $font-color;
@@ -57,6 +61,7 @@ img {
 .section-title {
   text-align: center;
   font-size: 30px;
+  margin: 30px 0;
 }
 .green {
   color: $site-color;
@@ -84,6 +89,7 @@ header {
   & .nav-bar {
     width: 90%;
     margin: 0 auto;
+    line-height: 60px;
 
     & .nav-item {
       float: left;
@@ -110,7 +116,15 @@ header {
   font-size: 20px;
   cursor: pointer;
   transition: 0.8s;
+}
+
+//movie index
+.movie-index {
   
+  & table {
+    margin: 0 auto;
+    width: 80%;
+  }
 }
 
 //footer
@@ -118,7 +132,10 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 40px;
   text-align: center;
   border-top: 1px solid $point-color;
+  & p {
+    line-height: 40px;
+  }
 }

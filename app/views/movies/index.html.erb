@@ -15,7 +15,11 @@
     <tbody>
       <% @movies.each do |movie| %>
         <tr>
-          <td><%= movie.title %></td>
+          <td>
+          <%= link_to movie_path(movie.id) do %>
+            <%= movie.title %>
+          <% end %>
+          </td>
           <td><%= movie.body %></td>
           <td></td>
           <td></td>
