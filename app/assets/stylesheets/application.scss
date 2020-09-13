@@ -13,3 +13,61 @@
  */
 //  @import "bootstrap";
 
+$background-color: #F5F7FA;
+$background-color2: #ceefe4;
+$site-color: #5BE7C4;
+$link-color: #50C1E9;
+$point-color: #7A57D1;
+$font-color: #200A3E;
+
+//all
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $link-color;
+  font-weight: bold;
+}
+.clear::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+//header
+header {
+  height: 60px;
+  border-bottom: 1px solid $point-color;
+
+  & .nav-left {
+    float: left;
+    font-size: 30px;
+    line-height: 60px;
+    font-weight: bold;
+    color: $site-color;
+  }
+  & .nav-right {
+    float: right;
+  }
+
+  & .nav-bar {
+    width: 90%;
+    margin: 0 auto;
+
+    & .nav-item {
+      float: left;
+      margin-right: 40px;
+    }
+  }
+
+}
