@@ -14,6 +14,14 @@
 body {
   background-color: #F5F7FA;
   color: #200A3E;
+  display: block;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 ul li {
@@ -24,6 +32,10 @@ a {
   text-decoration: none;
   color: #50C1E9;
   font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.5;
 }
 
 .clear::after {
@@ -41,6 +53,7 @@ img {
 header {
   height: 60px;
   border-bottom: 1px solid #7A57D1;
+  width: 100%;
 }
 
 header .nav-left {
@@ -63,4 +76,13 @@ header .nav-bar {
 header .nav-bar .nav-item {
   float: left;
   margin-right: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border-top: 1px solid #7A57D1;
 }
