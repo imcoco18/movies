@@ -3,13 +3,14 @@
     Moviee<span class="green">e</span><span class="parple">e</span>s
   </h1>
   <%= render 'movies/newform', movie: @movie%>
-  <table>
+  <table border="1">
     <thead>
       <tr>
         <th>映画タイトル</th>
         <th>感想</th>
         <th>投稿者</th>
         <th>投稿日時</th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
@@ -22,13 +23,13 @@
           <% end %>
           </td>
           <td><%= movie.body %></td>
-          <td></td>
-          <td></td>
-          <td>
-            <% if movie.user == current_user %>
-              <%= link_to "削除", movie_path(movie), method: :delete %>
-            <% end %>
-          </td>
+          <td><%= movie.user.name %></td>
+          <td><%= movie.created_at.strftime('%Y/%m/%d') %></td>
+          <% if movie.user == current_user %>
+            <td><%= link_to "編集", edit_movie_path(movie) %></td>
+            <td><%= link_to "削除", movie_path(movie), method: :delete %></td>
+          <% end %>
+        
         </tr>
       <% end %>
     </tbody>
