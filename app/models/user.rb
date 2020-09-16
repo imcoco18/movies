@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :movies, dependent: :destroy
+
+  validates :name, presence: true, length: {maximum: 20, minimum: 2}
+  # validates :introduction, length: { maximum: 50 }
 end
