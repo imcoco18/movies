@@ -2,3 +2,6 @@
 <%= @movie.title %>
 <h4>感想</h4>
 <%= @movie.body %>
+<div class="show-date">
+  <%= @movie.created_at.strftime('%Y/%m/%d') %>
+</div>

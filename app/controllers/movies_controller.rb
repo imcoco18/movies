@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @movies = Movie.all
@@ -20,6 +21,12 @@ class MoviesController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+    redirect_to movies_path
   end
 
   private

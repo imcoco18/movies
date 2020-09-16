@@ -10,6 +10,7 @@
         <th>感想</th>
         <th>投稿者</th>
         <th>投稿日時</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +24,11 @@
           <td><%= movie.body %></td>
           <td></td>
           <td></td>
+          <td>
+            <% if movie.user == current_user %>
+              <%= link_to "削除", movie_path(movie), method: :delete %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>

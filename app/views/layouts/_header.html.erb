@@ -1,11 +1,18 @@
 <header>
   <nav class="nav-bar">
-    <div class="nav-left">Moviees</div>
+    <div class="nav-left">
+      <%= link_to about_path do %>
+        Moviees
+      <% end %>
+    </div>
     <div class="nav-right">
       <ul>
       <% if user_signed_in? %>
           <li class="nav-item">
             <%= link_to "投稿", new_movie_path %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "マイページ", user_path(current_user.id) %>
           </li>
           <li class="nav-item">
             <%= link_to "一覧", movies_path %>
