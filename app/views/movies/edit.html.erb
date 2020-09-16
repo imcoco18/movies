@@ -1,2 +1,8 @@
-<h1>Movies#edit</h1>
-<p>Find me in app/views/movies/edit.html.erb</p>
+<h1>編集</h1>
+<%= form_for(@movie) do |f| %>
+  <label class="control-label">タイトル</label>
+  <%= f.text_field :title, autofocus: true, class:"form-control", placeholder:"title"%>
+  <label class="control-label">感想</label>
+  <%= f.text_area :body, autofocus: true, class:"form-control", placeholder:"body"%>
+  <%= f.submit "変更を保存" %>
+<% end %>
