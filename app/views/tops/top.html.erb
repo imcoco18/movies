@@ -1,9 +1,12 @@
 <div class="top">
   <h1 class="top-heading">Movies..</h1>
-  <div class="start-btn" id="target">
-    <%= link_to "はじめる", new_user_registration_path %>
-  </div>
-  <div class="start-btn" id="target">
-    <%= link_to "マイページへ", new_user_session_path %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="start-btn" id="target">
+      <%= link_to "マイページへ", new_user_session_path %>
+    </div>
+  <% else %>
+    <div class="start-btn" id="target">
+      <%= link_to "はじめる", new_user_registration_path %>
+    </div>
+  <% end %>
 </div>
