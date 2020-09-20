@@ -1,1 +1,16 @@
-<h1><%= @user.name %>さんのページ</h1>
+<section class="user-show">
+  <h1><%= @user.name %>さんのページ</h1>
+  <div class="user-wrapper clear">
+    <div class="user-icon">
+      <%= attachment_image_tag(@user, :profile_image_id, :fill, fallback: "no_image.jpg", class: "user-icon-image" ) %>
+    </div>
+    <div class="user-profile">
+      <div class="user-name"><%= @user.name %></div>
+      <p class="user-introduce"><%= @user.introduce %></p>
+      <div class="user-movietag"></div>
+    </div>
+  </div>
+  <div class="user-edit">
+      <%= link_to "プロフィール編集", edit_user_path %>
+  </div>
+</section>

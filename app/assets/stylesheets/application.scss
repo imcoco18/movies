@@ -139,3 +139,43 @@ footer {
     line-height: 40px;
   }
 }
+
+//user
+.user-show {
+  width: 50%;
+  margin: 0 auto;
+
+  & h1 {
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+  }
+  & .user-edit {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
+.user-wrapper {
+
+  
+  & .user-icon {
+    float: left;
+  }
+  & .user-icon-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+  & .user-profile {
+    float: right;
+
+    & .user-name {
+      font-size: 20px;
+      padding: 20px;
+    }
+    & .user-introduce {
+      font-size: 18px;
+      padding: 10px;
+    }
+  }
+}
